@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textAllCaps="false"
+            android:textSize="@dimen/size_titulo"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/etLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textSize="@dimen/size_texto"
+            android:text="@string/texto_vacio"
+            app:layout_constraintStart_toStartOf="@id/tvLog"/>
+
+        <Button
+            android:id="@+id/btCerrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_boton_cerrar"
+            android:textSize="@dimen/size_texto_boton"
+            app:layout_constraintTop_toTopOf="@id/etLog"
+            app:layout_constraintStart_toStartOf="@id/etLog"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
